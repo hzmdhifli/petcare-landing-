@@ -4,21 +4,22 @@
  */
 
 // ============================================================================
-// CONFIGURATION: Replace these with your real Store links when published
+// CONFIGURATION: Real Store and Social Links
 // ============================================================================
 const APP_CONFIG = {
-    // Paste your official Apple App Store URL here (e.g., https://apps.apple.com/app/petcare/id...)
-    appStoreUrl: "https://apps.apple.com/app/petcare-companion/id000000000",
+    // Official Apple App Store URL (coming soon)
+    appStoreUrl: "",
     
-    // Paste your official Google Play Store URL here (e.g., https://play.google.com/store/apps/details?id=com.example.petcare)
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.example.petcare",
+    // Official Google Play Store URL
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.hazem.petcare&pcampaignid=web_share",
     
-    // Direct APK download path (can point to local APK or hosted CDN)
+    // Direct APK download path
     apkDownloadUrl: "petcare-app.apk",
     
     // Social Handles
     instagramUrl: "https://instagram.com",
-    tiktokUrl: "https://tiktok.com"
+    tiktokUrl: "https://tiktok.com",
+    supportEmail: "support@petcare-app.com"
 };
 
 // ============================================================================
@@ -50,20 +51,19 @@ function initDeviceDetection() {
     if (isIOS) {
         if (devicePill && deviceText) {
             devicePill.style.display = "inline-flex";
-            deviceText.textContent = "🍏 iOS Device Detected • Ready for App Store";
+            deviceText.textContent = "🍏 iOS Version Coming Soon • Available on Android";
         }
         if (btnAppStore) {
-            btnAppStore.classList.add("highlighted-os");
             const highlightBadge = document.getElementById("ios-badge");
-            if (highlightBadge) highlightBadge.textContent = "Recommended";
+            if (highlightBadge) highlightBadge.textContent = "Coming Soon";
         }
         if (dockActionBtn) {
-            dockActionBtn.href = APP_CONFIG.appStoreUrl;
+            dockActionBtn.href = APP_CONFIG.playStoreUrl;
         }
     } else if (isAndroid) {
         if (devicePill && deviceText) {
             devicePill.style.display = "inline-flex";
-            deviceText.textContent = "🤖 Android Device Detected • Ready for Google Play";
+            deviceText.textContent = "🤖 Android Device Detected • Live on Google Play";
         }
         if (btnPlayStore) {
             btnPlayStore.classList.add("highlighted-os");
@@ -76,7 +76,7 @@ function initDeviceDetection() {
     } else {
         // Desktop or other device
         if (dockActionBtn) {
-            dockActionBtn.href = "#download";
+            dockActionBtn.href = APP_CONFIG.playStoreUrl;
         }
     }
 }
@@ -169,22 +169,19 @@ function initStoreLinkHandlers() {
 
     appStoreBtns.forEach(btn => {
         btn.addEventListener("click", (e) => {
-            if (APP_CONFIG.appStoreUrl && !APP_CONFIG.appStoreUrl.includes("id000000000")) {
+            if (APP_CONFIG.appStoreUrl && APP_CONFIG.appStoreUrl.length > 5) {
                 btn.href = APP_CONFIG.appStoreUrl;
             } else {
                 e.preventDefault();
-                showStoreModal("App Store", "PetCare for iOS is preparing for App Store release! You can also test on Android or download the APK below.");
+                showStoreModal("Apple App Store", "PetCare for iOS is currently in final development and coming soon to the App Store! If you're on Android, you can get it right now on Google Play or download the APK below.");
             }
         });
     });
 
     playStoreBtns.forEach(btn => {
-        btn.addEventListener("click", (e) => {
-            if (APP_CONFIG.playStoreUrl && !APP_CONFIG.playStoreUrl.includes("com.example.petcare")) {
+        btn.addEventListener("click", () => {
+            if (APP_CONFIG.playStoreUrl) {
                 btn.href = APP_CONFIG.playStoreUrl;
-            } else {
-                e.preventDefault();
-                showStoreModal("Google Play", "PetCare on Google Play is being published! You can download the direct Android APK right now to try it out immediately.");
             }
         });
     });
@@ -200,21 +197,25 @@ function showStoreModal(storeName, message) {
     const modal = document.createElement("div");
     modal.id = "store-modal";
     modal.style.cssText = `
-        position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 10000;
+        position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 10000;
         display: flex; align-items: center; justify-content: center; padding: 20px;
         backdrop-filter: blur(8px); animation: fadeIn 0.2s ease;
     `;
 
     modal.innerHTML = `
-        <div style="background: #FFF; border-radius: 24px; padding: 32px; max-width: 440px; width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.2); text-align: center; position: relative;">
-            <div style="font-size: 40px; margin-bottom: 12px;">🐾</div>
+        <div style="background: #FFF; border-radius: 28px; padding: 36px 28px; max-width: 440px; width: 100%; box-shadow: 0 25px 60px rgba(0,0,0,0.25); text-align: center; position: relative;">
+            <div style="font-size: 42px; margin-bottom: 12px;">🐾</div>
             <h3 style="font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 10px; color: #121826;">${storeName} Notice</h3>
+            <span style="display: inline-block; background: #FFF0EB; color: #FF6B35; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 12px; border-radius: 9999px; margin-bottom: 14px;">Coming Soon for iOS</span>
             <p style="font-size: 14.5px; color: #4B5563; line-height: 1.6; margin-bottom: 24px;">${message}</p>
             <div style="display: flex; flex-direction: column; gap: 10px;">
-                <a href="petcare-app.apk" download="PetCare.apk" style="display: inline-block; background: #FF6B35; color: #FFF; padding: 12px 20px; border-radius: 12px; font-weight: 700; text-decoration: none; font-size: 14px;">
-                    📥 Download APK Directly
+                <a href="${APP_CONFIG.playStoreUrl}" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: #121826; color: #FFF; padding: 13px 20px; border-radius: 14px; font-weight: 700; text-decoration: none; font-size: 14px;">
+                    ▶️ View on Google Play
                 </a>
-                <button id="close-modal-btn" style="background: #F3F4F6; border: none; padding: 10px; border-radius: 12px; font-weight: 600; color: #374151; cursor: pointer; font-size: 14px;">
+                <a href="petcare-app.apk" download="PetCare.apk" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: #FF6B35; color: #FFF; padding: 13px 20px; border-radius: 14px; font-weight: 700; text-decoration: none; font-size: 14px;">
+                    📥 Download Android APK Directly
+                </a>
+                <button id="close-modal-btn" style="background: #F3F4F6; border: none; padding: 11px; border-radius: 14px; font-weight: 600; color: #374151; cursor: pointer; font-size: 14px; margin-top: 4px;">
                     Close
                 </button>
             </div>
