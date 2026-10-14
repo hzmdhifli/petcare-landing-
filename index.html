@@ -13,6 +13,9 @@
     <meta property="og:image" content="images/screen_pets_list.png">
     <meta property="og:type" content="website">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logoette.jpg">
+
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,22 +28,34 @@
     <header class="site-header">
         <nav class="container nav-container" aria-label="Main Navigation">
             <a href="index.html" class="brand-logo" aria-label="PetCare Home">
-                <img src="logo.png" alt="PetCare Logo" class="brand-icon" width="44" height="44">
+                <img src="logoette.jpg" alt="PetCare Logo" class="brand-icon" width="44" height="44">
                 <span class="brand-name">PetCare<span class="brand-dot">.</span></span>
             </a>
 
             <ul class="nav-menu">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#preview">See It In Action</a></li>
-                <li><a href="#why-petcare">Why PetCare</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="#preview" data-i18n="nav_preview">See It In Action</a></li>
+                <li><a href="#why-petcare" data-i18n="nav_why">Why PetCare</a></li>
+                <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
             </ul>
 
+            <!-- Language Selector (Replaces Get App Free button) -->
             <div class="nav-actions">
-                <a href="#final-cta" class="btn-nav-download">
-                    <span>Get App Free</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M12 4v14"/></svg>
-                </a>
+                <div class="lang-selector-wrap" id="lang-selector">
+                    <div class="lang-selector-btn" id="lang-btn-display">
+                        <span class="lang-current-flag" id="current-lang-flag">🇬🇧</span>
+                        <span class="lang-current-label" id="current-lang-text">English</span>
+                        <svg class="lang-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                        <select id="lang-select" class="lang-native-select" aria-label="Select Language">
+                            <option value="en" selected>🇬🇧 English</option>
+                            <option value="fr">🇫🇷 Français</option>
+                            <option value="es">🇪🇸 Español</option>
+                            <option value="de">🇩🇪 Deutsch</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -53,11 +68,11 @@
                 
                 <!-- Left: Headline & Call To Action -->
                 <div class="hero-copy">
-                    <h1 class="hero-title">
+                    <h1 class="hero-title" data-i18n="hero_title">
                         Give Your Furry Friends the <span class="gradient-text">Care They Deserve</span>
                     </h1>
 
-                    <p class="hero-subtitle">
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">
                         The ultimate mobile companion for loving pet parents. Organize daily feeding, track health & vaccines, and never miss a vet appointment.
                     </p>
 
@@ -71,7 +86,7 @@
                                 </svg>
                             </div>
                             <div class="store-text">
-                                <span class="store-sub">GET IT ON</span>
+                                <span class="store-sub" data-i18n="btn_google_play_sub">GET IT ON</span>
                                 <span class="store-name">Google Play</span>
                             </div>
                             <span class="store-highlight" id="android-badge">Android</span>
@@ -85,10 +100,10 @@
                                 </svg>
                             </div>
                             <div class="store-text">
-                                <span class="store-sub">Coming Soon on</span>
+                                <span class="store-sub" data-i18n="btn_app_store_sub">Coming Soon on</span>
                                 <span class="store-name">App Store</span>
                             </div>
-                            <span class="store-highlight coming-soon-badge" id="ios-badge">Coming Soon</span>
+                            <span class="store-highlight coming-soon-badge" id="ios-badge" data-i18n="badge_coming_soon">Coming Soon</span>
                         </a>
                     </div>
                 </div>
@@ -99,7 +114,7 @@
                     <!-- Floating Pill Notifications -->
                     <div class="floating-pill pill-top-left animate-float-slow">
                         <span class="pill-icon">🐕</span>
-                        <div>
+                        <div data-i18n="pill_buddy">
                             <strong>Buddy (Golden)</strong>
                             <small>Morning Walk • Completed ✅</small>
                         </div>
@@ -107,7 +122,7 @@
 
                     <div class="floating-pill pill-bottom-right animate-float-fast">
                         <span class="pill-icon">💉</span>
-                        <div>
+                        <div data-i18n="pill_luna">
                             <strong>Luna (Persian Cat)</strong>
                             <small>Vaccination scheduled 🗓️</small>
                         </div>
@@ -139,9 +154,9 @@
         <section class="features-section" id="features">
             <div class="container">
                 <div class="section-title-wrap">
-                    <span class="sub-badge">Features</span>
-                    <h2 class="section-title">Designed for Pets. Built for Peace of Mind.</h2>
-                    <p class="section-desc">Keep every pet in your household thriving with simple, focused daily tools.</p>
+                    <span class="sub-badge" data-i18n="features_badge">Features</span>
+                    <h2 class="section-title" data-i18n="features_title">Designed for Pets. Built for Peace of Mind.</h2>
+                    <p class="section-desc" data-i18n="features_desc">Keep every pet in your household thriving with simple, focused daily tools.</p>
                 </div>
 
                 <div class="features-grid">
@@ -151,9 +166,9 @@
                         <div class="feat-icon-box orange">
                             <span class="icon">⏰</span>
                         </div>
-                        <h3>Smart Reminders</h3>
-                        <p>Custom notifications for meals, walks, grooming and medication, with fun pet sounds.</p>
-                        <div class="card-tag">Routine & Sound Alerts</div>
+                        <h3 data-i18n="feat_1_title">Smart Reminders</h3>
+                        <p data-i18n="feat_1_desc">Custom notifications for meals, walks, grooming and medication, with fun pet sounds.</p>
+                        <div class="card-tag" data-i18n="feat_1_tag">Routine & Sound Alerts</div>
                     </div>
 
                     <!-- Card 2: Weight & Vet Visit Log (New) -->
@@ -161,9 +176,9 @@
                         <div class="feat-icon-box purple">
                             <span class="icon">📊</span>
                         </div>
-                        <h3>Weight & Vet Visit Log</h3>
-                        <p>Track weight over time and upcoming vet appointments.</p>
-                        <div class="card-tag">Health History</div>
+                        <h3 data-i18n="feat_2_title">Weight & Vet Visit Log</h3>
+                        <p data-i18n="feat_2_desc">Track weight over time and upcoming vet appointments.</p>
+                        <div class="card-tag" data-i18n="feat_2_tag">Health History</div>
                     </div>
 
                     <!-- Card 3: Health & Vaccine Passport (Rewritten) -->
@@ -171,9 +186,9 @@
                         <div class="feat-icon-box green">
                             <span class="icon">🩺</span>
                         </div>
-                        <h3>Health & Vaccine Passport</h3>
-                        <p>Store vaccination dates, vet appointments and weight history in one place.</p>
-                        <div class="card-tag">Essential Records</div>
+                        <h3 data-i18n="feat_3_title">Health & Vaccine Passport</h3>
+                        <p data-i18n="feat_3_desc">Store vaccination dates, vet appointments and weight history in one place.</p>
+                        <div class="card-tag" data-i18n="feat_3_tag">Essential Records</div>
                     </div>
 
                     <!-- Card 4: Multi-Pet Profiles (Kept) -->
@@ -181,9 +196,9 @@
                         <div class="feat-icon-box blue">
                             <span class="icon">🐾</span>
                         </div>
-                        <h3>Multi-Pet Profiles</h3>
-                        <p>Have 2 dogs, a cat, and a bunny? Manage every family member with unique avatars, colors, and species cards.</p>
-                        <div class="card-tag">Dogs, Cats & More</div>
+                        <h3 data-i18n="feat_4_title">Multi-Pet Profiles</h3>
+                        <p data-i18n="feat_4_desc">Have 2 dogs, a cat, and a bunny? Manage every family member with unique avatars, colors, and species cards.</p>
+                        <div class="card-tag" data-i18n="feat_4_tag">Dogs, Cats & More</div>
                     </div>
 
                     <!-- Card 5: Cloud Sync & Backup (Kept) -->
@@ -191,9 +206,9 @@
                         <div class="feat-icon-box yellow">
                             <span class="icon">☁️</span>
                         </div>
-                        <h3>Cloud Sync & Backup</h3>
-                        <p>Sign in with Google or Apple. Keep your pet records backed up safely and synchronized across all your devices.</p>
-                        <div class="card-tag">Always Safe</div>
+                        <h3 data-i18n="feat_5_title">Cloud Sync & Backup</h3>
+                        <p data-i18n="feat_5_desc">Sign in with Google or Apple. Keep your pet records backed up safely and synchronized across all your devices.</p>
+                        <div class="card-tag" data-i18n="feat_5_tag">Always Safe</div>
                     </div>
 
                     <!-- Card 6: Multi-Language Support (Kept) -->
@@ -201,9 +216,9 @@
                         <div class="feat-icon-box pink">
                             <span class="icon">🌍</span>
                         </div>
-                        <h3>Multi-Language Support</h3>
-                        <p>Available in English, French, Spanish, German, Arabic, and more so pet lovers everywhere can care with ease.</p>
-                        <div class="card-tag">Worldwide Ready</div>
+                        <h3 data-i18n="feat_6_title">Multi-Language Support</h3>
+                        <p data-i18n="feat_6_desc">Available in English, French, Spanish, German, Arabic, and more so pet lovers everywhere can care with ease.</p>
+                        <div class="card-tag" data-i18n="feat_6_tag">Worldwide Ready</div>
                     </div>
 
                 </div>
@@ -214,9 +229,9 @@
         <section class="gallery-showcase" id="preview">
             <div class="container">
                 <div class="section-title-wrap">
-                    <span class="sub-badge">App Walkthrough</span>
-                    <h2 class="section-title">See It In Action</h2>
-                    <p class="section-desc">Clean, playful, and crafted with care. Explore your daily PetCare screens:</p>
+                    <span class="sub-badge" data-i18n="walkthrough_badge">App Walkthrough</span>
+                    <h2 class="section-title" data-i18n="walkthrough_title">See It In Action</h2>
+                    <p class="section-desc" data-i18n="walkthrough_desc">Clean, playful, and crafted with care. Explore your daily PetCare screens:</p>
                 </div>
 
                 <div class="screens-row two-screens">
@@ -224,8 +239,8 @@
                     <div class="screen-card">
                         <div class="screen-header-info">
                             <span class="step-num">01</span>
-                            <h3>Pet Health & Wellness</h3>
-                            <p>Overview of pet health status, vaccines, and grooming schedules.</p>
+                            <h3 data-i18n="step_1_title">Pet Health & Wellness</h3>
+                            <p data-i18n="step_1_desc">Overview of pet health status, vaccines, and grooming schedules.</p>
                         </div>
                         <div class="screen-img-frame">
                             <img src="images/screen_pets_list.png" alt="Pet Health and Profiles Overview">
@@ -236,8 +251,8 @@
                     <div class="screen-card">
                         <div class="screen-header-info">
                             <span class="step-num">02</span>
-                            <h3>Custom Profiles & Avatars</h3>
-                            <p>Customize species, breeds, weight, and theme color tags.</p>
+                            <h3 data-i18n="step_2_title">Custom Profiles & Avatars</h3>
+                            <p data-i18n="step_2_desc">Customize species, breeds, weight, and theme color tags.</p>
                         </div>
                         <div class="screen-img-frame">
                             <img src="images/screen_add_pet.png" alt="Add New Pet Screen">
@@ -251,9 +266,9 @@
         <section class="why-section" id="why-petcare">
             <div class="container">
                 <div class="section-title-wrap">
-                    <span class="sub-badge">Our Mission</span>
-                    <h2 class="section-title">Why we built PetCare</h2>
-                    <p class="section-desc">Created to give pet owners peace of mind without complicated spreadsheets or clutter.</p>
+                    <span class="sub-badge" data-i18n="why_badge">Our Mission</span>
+                    <h2 class="section-title" data-i18n="why_title">Why we built PetCare</h2>
+                    <p class="section-desc" data-i18n="why_desc">Created to give pet owners peace of mind without complicated spreadsheets or clutter.</p>
                 </div>
 
                 <div class="why-cards-grid">
@@ -262,24 +277,24 @@
                         <div class="why-icon-box orange">
                             <span class="icon">💊</span>
                         </div>
-                        <h3>Never miss a dose</h3>
-                        <p>Routine reminders ensure every meal, walk, medication, and vet booster happens exactly on schedule.</p>
+                        <h3 data-i18n="why_1_title">Never miss a dose</h3>
+                        <p data-i18n="why_1_desc">Routine reminders ensure every meal, walk, medication, and vet booster happens exactly on schedule.</p>
                     </div>
 
                     <div class="why-card">
                         <div class="why-icon-box green">
                             <span class="icon">🐾</span>
                         </div>
-                        <h3>One place for every pet</h3>
-                        <p>Whether you care for one dog or a full pet family, all health histories and profiles stay organized in one tap.</p>
+                        <h3 data-i18n="why_2_title">One place for every pet</h3>
+                        <p data-i18n="why_2_desc">Whether you care for one dog or a full pet family, all health histories and profiles stay organized in one tap.</p>
                     </div>
 
                     <div class="why-card">
                         <div class="why-icon-box blue">
                             <span class="icon">⚡</span>
                         </div>
-                        <h3>Works offline</h3>
-                        <p>Smart notifications run directly on your device so your reminders arrive reliably even without an internet connection.</p>
+                        <h3 data-i18n="why_3_title">Works offline</h3>
+                        <p data-i18n="why_3_desc">Smart notifications run directly on your device so your reminders arrive reliably even without an internet connection.</p>
                     </div>
 
                 </div>
@@ -290,50 +305,50 @@
         <section class="faq-section" id="faq">
             <div class="container faq-container">
                 <div class="section-title-wrap">
-                    <span class="sub-badge">Got Questions?</span>
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="section-desc">Quick answers about downloading and using the PetCare app.</p>
+                    <span class="sub-badge" data-i18n="faq_badge">Got Questions?</span>
+                    <h2 class="section-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+                    <p class="section-desc" data-i18n="faq_desc">Quick answers about downloading and using the PetCare app.</p>
                 </div>
 
                 <div class="faq-list">
                     
                     <details class="faq-item" open>
                         <summary class="faq-question">
-                            <span>Where can I download the app?</span>
+                            <span data-i18n="faq_q1">Where can I download the app?</span>
                             <span class="faq-chevron">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>PetCare is available on Google Play for Android. The iOS version is coming soon. A direct APK is available for Android beta testers.</p>
+                            <p data-i18n="faq_a1">PetCare is available on Google Play for Android. The iOS version is coming soon. A direct APK is available for Android beta testers.</p>
                         </div>
                     </details>
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>Is PetCare free to download and use?</span>
+                            <span data-i18n="faq_q2">Is PetCare free to download and use?</span>
                             <span class="faq-chevron">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Yes, PetCare is free to download and use. [Pro plan details coming soon.]</p>
+                            <p data-i18n="faq_a2">Yes, PetCare is free to download and use. [Pro plan details coming soon.]</p>
                         </div>
                     </details>
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>Can I manage multiple pets of different species?</span>
+                            <span data-i18n="faq_q3">Can I manage multiple pets of different species?</span>
                             <span class="faq-chevron">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Absolutely. PetCare supports dogs, cats, birds, horses, rabbits, and other domestic pets. You can assign each pet their own avatar, birthday, weight history, and schedule.</p>
+                            <p data-i18n="faq_a3">Absolutely. PetCare supports dogs, cats, birds, horses, rabbits, and other domestic pets. You can assign each pet their own avatar, birthday, weight history, and schedule.</p>
                         </div>
                     </details>
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>Will I get notifications if my phone is locked?</span>
+                            <span data-i18n="faq_q4">Will I get notifications if my phone is locked?</span>
                             <span class="faq-chevron">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Yes! PetCare uses local smart notifications scheduled right on your device. You will receive alarms for feeding times, walks, and medications even when offline.</p>
+                            <p data-i18n="faq_a4">Yes! PetCare uses local smart notifications scheduled right on your device. You will receive alarms for feeding times, walks, and medications even when offline.</p>
                         </div>
                     </details>
 
@@ -346,8 +361,8 @@
             <div class="container">
                 <div class="cta-banner">
                     <span class="cta-emoji">🐶❤️🐱</span>
-                    <h2>Start Giving Your Pets the Best Care Today</h2>
-                    <p>Keep your daily pet routines organized, simple, and stress-free.</p>
+                    <h2 data-i18n="cta_title">Start Giving Your Pets the Best Care Today</h2>
+                    <p data-i18n="cta_desc">Keep your daily pet routines organized, simple, and stress-free.</p>
                     
                     <div class="store-buttons-group center" id="final-download">
                         <!-- Google Play (Live) -->
@@ -358,7 +373,7 @@
                                 </svg>
                             </div>
                             <div class="store-text">
-                                <span class="store-sub">Get it on</span>
+                                <span class="store-sub" data-i18n="btn_google_play_sub">Get it on</span>
                                 <span class="store-name">Google Play</span>
                             </div>
                             <span class="store-highlight">Android</span>
@@ -372,35 +387,35 @@
                                 </svg>
                             </div>
                             <div class="store-text">
-                                <span class="store-sub">Coming Soon on</span>
+                                <span class="store-sub" data-i18n="btn_app_store_sub">Coming Soon on</span>
                                 <span class="store-name">App Store</span>
                             </div>
-                            <span class="store-highlight coming-soon-badge">Coming Soon</span>
+                            <span class="store-highlight coming-soon-badge" data-i18n="badge_coming_soon">Coming Soon</span>
                         </a>
                     </div>
 
-                    <!-- Single Direct APK Download link (Requirement 3) -->
+                    <!-- Single Direct APK Download link -->
                     <div class="apk-download-box center">
                         <a href="petcare-app.apk" class="apk-link" download="PetCare-app.apk">
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993 0 .5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.996-3.4572c.1051-.1822.0427-.4151-.1395-.5202-.1821-.1051-.415-.0427-.5201.1395l-2.0251 3.5076c-1.5791-.7208-3.3643-1.1217-5.2428-1.1217-1.8785 0-3.6637.4009-5.2428 1.1217L4.678 4.9835c-.1051-.1822-.338-.2446-.5201-.1395-.1822.1051-.2446.338-.1395.5202l1.996 3.4572C2.6841 10.6698.4285 14.2882.4285 18.5h23.143c0-4.2118-2.2556-7.8302-5.6885-9.1786"/></svg>
-                            Android beta APK (v1.0)
+                            <span data-i18n="apk_text">Android beta APK (v1.0)</span>
                         </a>
                     </div>
 
-                    <!-- Desktop Only QR Block (Requirement 1 & 8) -->
+                    <!-- Desktop Only QR Block -->
                     <div class="cta-qr-card desktop-only">
                         <div class="cta-qr-content">
-                            <span class="qr-subtag">📱 Scan with your phone</span>
-                            <h3>Instant Google Play Download</h3>
-                            <p>Scan with your phone camera to open the Google Play store page directly.</p>
+                            <span class="qr-subtag" data-i18n="qr_subtag">📱 Scan with your phone</span>
+                            <h3 data-i18n="qr_title">Instant Google Play Download</h3>
+                            <p data-i18n="qr_desc">Scan with your phone camera to open the Google Play store page directly.</p>
                             <div class="qr-badges-clean">
                                 <span>🤖 Android 8.0+</span>
-                                <span>⚡ Free</span>
+                                <span data-i18n="sticky_status">Free</span>
                             </div>
                         </div>
                         <div class="cta-qr-image-wrapper">
                             <img src="images/qr_google_play.png" alt="Scan to open PetCare on Google Play" width="120" height="120" class="real-qr-code">
-                            <span class="qr-micro-caption">Google Play Direct Link</span>
+                            <span class="qr-micro-caption" data-i18n="qr_caption">Google Play Direct Link</span>
                         </div>
                     </div>
 
@@ -414,44 +429,44 @@
         <div class="container footer-layout">
             <div class="footer-brand-side">
                 <div class="brand-logo">
-                    <img src="logo.png" alt="PetCare Logo" class="brand-icon" width="38" height="38">
+                    <img src="logoette.jpg" alt="PetCare Logo" class="brand-icon" width="38" height="38">
                     <span class="brand-name">PetCare</span>
                 </div>
-                <p class="footer-tagline">Your beloved pets deserve loving, organized care every single day.</p>
+                <p class="footer-tagline" data-i18n="footer_tagline">Your beloved pets deserve loving, organized care every single day.</p>
             </div>
 
             <div class="footer-links-side">
                 <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <a href="#features">Features</a>
-                    <a href="#preview">See It In Action</a>
-                    <a href="#why-petcare">Why PetCare</a>
-                    <a href="#faq">FAQ</a>
+                    <h4 data-i18n="footer_nav_heading">Navigation</h4>
+                    <a href="#features" data-i18n="nav_features">Features</a>
+                    <a href="#preview" data-i18n="nav_preview">See It In Action</a>
+                    <a href="#why-petcare" data-i18n="nav_why">Why PetCare</a>
+                    <a href="#faq" data-i18n="nav_faq">FAQ</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Legal & Trust</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="mailto:SUPPORT_EMAIL">Support Contact</a>
+                    <h4 data-i18n="footer_legal_heading">Legal & Trust</h4>
+                    <a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+                    <a href="terms.html" data-i18n="footer_terms">Terms of Service</a>
+                    <a href="mailto:SUPPORT_EMAIL" data-i18n="footer_support">Support Contact</a>
                 </div>
             </div>
         </div>
 
         <div class="container footer-bottom">
-            <p>&copy; 2026 PetCare App. Built with ❤️ for pets and pet parents everywhere.</p>
+            <p data-i18n="footer_copy">&copy; 2026 PetCare App. Built with ❤️ for pets and pet parents everywhere.</p>
         </div>
     </footer>
 
     <!-- 8. Mobile Sticky Download Dock (Touchpoint 3 of 3 - Mobile Only) -->
     <div class="mobile-sticky-dock" id="mobile-dock" aria-label="Sticky Download Bar">
         <div class="dock-inner">
-            <img src="logo.png" alt="PetCare" class="dock-icon" width="40" height="40">
+            <img src="logoette.jpg" alt="PetCare" class="dock-icon" width="40" height="40">
             <div class="dock-info">
                 <span class="dock-title">PetCare</span>
-                <span class="dock-status">Free</span>
+                <span class="dock-status" data-i18n="sticky_status">Free</span>
             </div>
             <a href="https://play.google.com/store/apps/details?id=com.hazem.petcare" target="_blank" rel="noopener noreferrer" class="dock-btn" id="dock-action-btn">
-                <span>Install</span>
+                <span data-i18n="sticky_btn">Install</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 13l5 5 5-5M12 4v14"/></svg>
             </a>
         </div>
