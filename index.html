@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>PetCare App 🐾 | Your All-in-One Pet Care Companion</title>
-    <meta name="description" content="Manage your pets' health, feeding schedules, vaccine reminders, and daily happiness. As seen on Instagram and TikTok. Download PetCare free for iOS & Android.">
+    <meta name="description" content="Manage your pets' feeding, walks, medications and vaccines in one app. Free on Android - iOS coming soon.">
     <meta name="keywords" content="pet care app, dog tracker, cat health, pet reminders, pet feeding schedule, pet vaccination tracker">
     
-    <!-- Open Graph for Instagram, TikTok & Social Previews -->
+    <!-- Open Graph Previews -->
     <meta property="og:title" content="PetCare App - Happy Pets, Organized Pet Parents">
-    <meta property="og:description" content="Never miss a walk, meal, or vet visit. Download free on iOS & Android!">
+    <meta property="og:description" content="Manage your pets' feeding, walks, medications and vaccines in one app. Free on Android - iOS coming soon.">
     <meta property="og:image" content="images/screen_pets_list.png">
     <meta property="og:type" content="website">
 
@@ -21,20 +21,6 @@
 </head>
 <body>
 
-    <!-- Social Media Campaign Announcement Bar -->
-    <aside class="social-banner" aria-label="Social Welcome Banner">
-        <div class="container banner-inner">
-            <span class="pulse-dot" aria-hidden="true"></span>
-            <p>
-                <strong>👋 Welcome from TikTok & Instagram!</strong> Get instant free access to PetCare today.
-            </p>
-            <div class="social-tags" aria-label="Social media mentions">
-                <span class="social-chip ig">📸 @petcareapp</span>
-                <span class="social-chip tt">🎵 #PetCareApp</span>
-            </div>
-        </div>
-    </aside>
-
     <!-- Navigation Header -->
     <header class="site-header">
         <nav class="container nav-container" aria-label="Main Navigation">
@@ -44,14 +30,14 @@
             </a>
 
             <ul class="nav-menu">
-                <li><a href="#preview">App Tour</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#reviews">Community</a></li>
+                <li><a href="#preview">See It In Action</a></li>
+                <li><a href="#why-petcare">Why PetCare</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="#download" class="btn-nav-download">
+                <a href="#final-cta" class="btn-nav-download">
                     <span>Get App Free</span>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M12 4v14"/></svg>
                 </a>
@@ -59,18 +45,14 @@
         </nav>
     </header>
 
-    <!-- Main Hero Section -->
+    <!-- Main Content -->
     <main>
+        <!-- 1. Hero Section -->
         <section class="hero-section" id="hero">
             <div class="container hero-grid">
                 
                 <!-- Left: Headline & Call To Action -->
                 <div class="hero-copy">
-                    <div class="hero-badge">
-                        <span class="star-icon">⭐</span>
-                        <span>Rated 4.9/5 by 15,000+ Pet Parents</span>
-                    </div>
-
                     <h1 class="hero-title">
                         Give Your Furry Friends the <span class="gradient-text">Care They Deserve</span>
                     </h1>
@@ -79,30 +61,10 @@
                         The ultimate mobile companion for loving pet parents. Organize daily feeding, track health & vaccines, and never miss a vet appointment.
                     </p>
 
-                    <!-- Smart Device Detection Notice -->
-                    <div class="device-pill" id="device-pill" style="display: none;">
-                        <span class="pill-dot"></span>
-                        <span id="device-text">Detected device</span>
-                    </div>
-
-                    <!-- Primary Store Download Buttons -->
+                    <!-- Primary Store Download Buttons (Touchpoint 1 of 3) -->
                     <div class="store-buttons-group" id="download">
-                        <!-- Apple App Store (Coming Soon) -->
-                        <a href="#appstore" class="store-btn ios-btn coming-soon-btn" id="btn-appstore" aria-label="Download on Apple App Store (Coming Soon)">
-                            <div class="store-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 1.01-2.87-.96.04-2.15.65-2.81 1.43-.58.68-1.1 1.75-1.01 2.8.07 0 2.22-.61 2.81-1.36z"/>
-                                </svg>
-                            </div>
-                            <div class="store-text">
-                                <span class="store-sub">Coming Soon on</span>
-                                <span class="store-name">App Store</span>
-                            </div>
-                            <span class="store-highlight coming-soon-badge" id="ios-badge">Coming Soon</span>
-                        </a>
-
-                        <!-- Google Play Store -->
-                        <a href="https://play.google.com/store/apps/details?id=com.hazem.petcare&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="store-btn android-btn" id="btn-playstore" aria-label="Get it on Google Play Store">
+                        <!-- Google Play Store (Live) -->
+                        <a href="https://play.google.com/store/apps/details?id=com.hazem.petcare" target="_blank" rel="noopener noreferrer" class="store-btn android-btn" id="btn-playstore" aria-label="Get it on Google Play Store">
                             <div class="store-icon">
                                 <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M3.609 1.814L13.792 12 3.61 22.186a2.41 2.41 0 0 1-.22-.986V2.8c0-.36.08-.7.22-.986zm11.3 11.3l2.45 2.45-12.08 6.97 9.63-9.42zm2.45-2.45l-2.45 2.45-9.63-9.42 12.08 6.97zm1.18 1.18l3.32 1.92c.93.54.93 1.42 0 1.96l-3.32 1.92-2.13-2.13 2.13-2.13z"/>
@@ -114,34 +76,25 @@
                             </div>
                             <span class="store-highlight" id="android-badge">Android</span>
                         </a>
-                    </div>
 
-                    <!-- Direct APK Download fallback link -->
-                    <div class="apk-download-box">
-                        <span class="apk-hint">Need direct Android installation?</span>
-                        <a href="petcare-app.apk" class="apk-link" download="PetCare-app.apk">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993 0 .5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.996-3.4572c.1051-.1822.0427-.4151-.1395-.5202-.1821-.1051-.415-.0427-.5201.1395l-2.0251 3.5076c-1.5791-.7208-3.3643-1.1217-5.2428-1.1217-1.8785 0-3.6637.4009-5.2428 1.1217L4.678 4.9835c-.1051-.1822-.338-.2446-.5201-.1395-.1822.1051-.2446.338-.1395.5202l1.996 3.4572C2.6841 10.6698.4285 14.2882.4285 18.5h23.143c0-4.2118-2.2556-7.8302-5.6885-9.1786"/></svg>
-                            Direct APK Download (v1.0)
+                        <!-- Apple App Store (Coming Soon) -->
+                        <a href="#appstore" class="store-btn ios-btn coming-soon-btn" id="btn-appstore" aria-label="Apple App Store (Coming Soon)">
+                            <div class="store-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 1.01-2.87-.96.04-2.15.65-2.81 1.43-.58.68-1.1 1.75-1.01 2.8.07 0 2.22-.61 2.81-1.36z"/>
+                                </svg>
+                            </div>
+                            <div class="store-text">
+                                <span class="store-sub">Coming Soon on</span>
+                                <span class="store-name">App Store</span>
+                            </div>
+                            <span class="store-highlight coming-soon-badge" id="ios-badge">Coming Soon</span>
                         </a>
-                    </div>
-
-                    <!-- Social Media Community Highlights -->
-                    <div class="social-proof-strip">
-                        <div class="avatars-cluster">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="User Avatar" class="user-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="User Avatar" class="user-avatar">
-                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face" alt="User Avatar" class="user-avatar">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" alt="User Avatar" class="user-avatar">
-                        </div>
-                        <div class="proof-text">
-                            <div class="stars">★★★★★</div>
-                            <span>Loved by dog & cat parents on Instagram & TikTok</span>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Right: Interactive App Phone Mockup -->
-                <div class="hero-visual" id="preview">
+                <!-- Right: Smartphone Mockup showing screen_today_plan.png -->
+                <div class="hero-visual">
                     
                     <!-- Floating Pill Notifications -->
                     <div class="floating-pill pill-top-left animate-float-slow">
@@ -168,7 +121,7 @@
                                 <span class="camera-lens"></span>
                             </div>
 
-                            <!-- Screen Viewport with Active Image -->
+                            <!-- Screen Viewport with screen_today_plan.png -->
                             <div class="phone-screen">
                                 <img src="images/screen_today_plan.png" alt="PetCare Today's Plan Screen" class="active-screen-img" id="mockup-img">
                             </div>
@@ -176,119 +129,56 @@
                             <!-- Glass reflection effect -->
                             <div class="phone-glare"></div>
                         </div>
-
-                        <!-- Screen Switcher Tabs Under Mockup -->
-                        <div class="screen-selector" role="tablist" aria-label="Select screen preview">
-                            <button class="selector-tab active" data-screen="images/screen_today_plan.png" data-title="Daily Schedule & Care Plans" role="tab" aria-selected="true">
-                                <span class="tab-icon">📅</span>
-                                <span>Daily Plan</span>
-                            </button>
-                            <button class="selector-tab" data-screen="images/screen_pets_list.png" data-title="Pet Health & Vaccination Record" role="tab" aria-selected="false">
-                                <span class="tab-icon">🩺</span>
-                                <span>Health & Pets</span>
-                            </button>
-                            <button class="selector-tab" data-screen="images/screen_add_pet.png" data-title="Custom Profiles & Avatars" role="tab" aria-selected="false">
-                                <span class="tab-icon">🐾</span>
-                                <span>Add Pet</span>
-                            </button>
-                        </div>
-
-                        <p class="selector-caption" id="mockup-caption">
-                            ✨ Real screen: Check off daily feeding, medicine, and walks effortlessly.
-                        </p>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- Social Media Creator Showcase Strip -->
-        <section class="social-highlight-section">
-            <div class="container">
-                <div class="social-banner-card">
-                    <div class="social-badge-tag">TRENDING NOW</div>
-                    <div class="social-content-row">
-                        <div class="social-info">
-                            <h2>Watch How Pet Parents Use PetCare on Social Media</h2>
-                            <p>From puppy potty training schedules to senior cat medications, see how creators streamline their daily routine in seconds.</p>
-                        </div>
-                        <div class="social-channels-group">
-                            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-channel-card tiktok-card" aria-label="PetCare on TikTok">
-                                <div class="social-channel-icon">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                                    </svg>
-                                </div>
-                                <div class="social-channel-text">
-                                    <span class="social-channel-title">TikTok</span>
-                                    <span class="social-channel-desc">Watch Videos</span>
-                                </div>
-                            </a>
-
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-channel-card instagram-card" aria-label="PetCare on Instagram">
-                                <div class="social-channel-icon">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                    </svg>
-                                </div>
-                                <div class="social-channel-text">
-                                    <span class="social-channel-title">Instagram</span>
-                                    <span class="social-channel-desc">Community</span>
-                                </div>
-                            </a>
-
-                            <a href="mailto:support@petcare-app.com" class="social-channel-card mail-card" aria-label="Email PetCare Support">
-                                <div class="social-channel-icon">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect width="20" height="16" x="2" y="4" rx="2"/>
-                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                                    </svg>
-                                </div>
-                                <div class="social-channel-text">
-                                    <span class="social-channel-title">Email Us</span>
-                                    <span class="social-channel-desc">Contact Support</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Feature Walkthrough Section -->
+        <!-- 2. Features Section (6 Cards, No Overlaps) -->
         <section class="features-section" id="features">
             <div class="container">
                 <div class="section-title-wrap">
-                    <span class="sub-badge">Everything You Need</span>
+                    <span class="sub-badge">Features</span>
                     <h2 class="section-title">Designed for Pets. Built for Peace of Mind.</h2>
-                    <p class="section-desc">No complicated spreadsheets or missed reminders. Keep every pet in your household thriving.</p>
+                    <p class="section-desc">Keep every pet in your household thriving with simple, focused daily tools.</p>
                 </div>
 
                 <div class="features-grid">
                     
-                    <!-- Feature Card 1 -->
+                    <!-- Card 1: Smart Reminders (Merged) -->
                     <div class="feature-card">
                         <div class="feat-icon-box orange">
                             <span class="icon">⏰</span>
                         </div>
-                        <h3>Smart Routine Reminders</h3>
-                        <p>Set custom notifications for feeding times, morning walks, grooming, and medications with delightful pet sounds.</p>
-                        <div class="card-tag">Never Forget Meals</div>
+                        <h3>Smart Reminders</h3>
+                        <p>Custom notifications for meals, walks, grooming and medication, with fun pet sounds.</p>
+                        <div class="card-tag">Routine & Sound Alerts</div>
                     </div>
 
-                    <!-- Feature Card 2 -->
+                    <!-- Card 2: Weight & Vet Visit Log (New) -->
                     <div class="feature-card">
                         <div class="feat-icon-box purple">
+                            <span class="icon">📊</span>
+                        </div>
+                        <h3>Weight & Vet Visit Log</h3>
+                        <p>Track weight over time and upcoming vet appointments.</p>
+                        <div class="card-tag">Health History</div>
+                    </div>
+
+                    <!-- Card 3: Health & Vaccine Passport (Rewritten) -->
+                    <div class="feature-card">
+                        <div class="feat-icon-box green">
                             <span class="icon">🩺</span>
                         </div>
                         <h3>Health & Vaccine Passport</h3>
-                        <p>Store vaccination dates, vet appointments, weights, and health percentages so you're always ready for checkups.</p>
-                        <div class="card-tag">Clinical Tracking</div>
+                        <p>Store vaccination dates, vet appointments and weight history in one place.</p>
+                        <div class="card-tag">Essential Records</div>
                     </div>
 
-                    <!-- Feature Card 3 -->
+                    <!-- Card 4: Multi-Pet Profiles (Kept) -->
                     <div class="feature-card">
-                        <div class="feat-icon-box green">
+                        <div class="feat-icon-box blue">
                             <span class="icon">🐾</span>
                         </div>
                         <h3>Multi-Pet Profiles</h3>
@@ -296,27 +186,17 @@
                         <div class="card-tag">Dogs, Cats & More</div>
                     </div>
 
-                    <!-- Feature Card 4 -->
-                    <div class="feature-card">
-                        <div class="feat-icon-box blue">
-                            <span class="icon">🔔</span>
-                        </div>
-                        <h3>Playful Audio Alerts</h3>
-                        <p>Enjoy friendly custom alert barks and purrs to remind you when your pet's favorite activity is up next.</p>
-                        <div class="card-tag">Fun & Functional</div>
-                    </div>
-
-                    <!-- Feature Card 5 -->
+                    <!-- Card 5: Cloud Sync & Backup (Kept) -->
                     <div class="feature-card">
                         <div class="feat-icon-box yellow">
                             <span class="icon">☁️</span>
                         </div>
-                        <h3>Cloud Sync & Secure Backup</h3>
+                        <h3>Cloud Sync & Backup</h3>
                         <p>Sign in with Google or Apple. Keep your pet records backed up safely and synchronized across all your devices.</p>
                         <div class="card-tag">Always Safe</div>
                     </div>
 
-                    <!-- Feature Card 6 -->
+                    <!-- Card 6: Multi-Language Support (Kept) -->
                     <div class="feature-card">
                         <div class="feat-icon-box pink">
                             <span class="icon">🌍</span>
@@ -330,139 +210,83 @@
             </div>
         </section>
 
-        <!-- Visual Illustration Showcase Section -->
-        <section class="gallery-showcase">
+        <!-- 3. App Walkthrough Section ("See It In Action") -->
+        <section class="gallery-showcase" id="preview">
             <div class="container">
                 <div class="section-title-wrap">
                     <span class="sub-badge">App Walkthrough</span>
                     <h2 class="section-title">See It In Action</h2>
-                    <p class="section-desc">Clean, playful, and crafted with love. Here is what your daily dashboard looks like:</p>
+                    <p class="section-desc">Clean, playful, and crafted with care. Explore your daily PetCare screens:</p>
                 </div>
 
-                <div class="screens-row">
-                    <!-- Screen Card 1 -->
+                <div class="screens-row two-screens">
+                    <!-- Step 01: screen_pets_list.png -->
                     <div class="screen-card">
                         <div class="screen-header-info">
                             <span class="step-num">01</span>
-                            <h3>Daily Task Tracking</h3>
-                            <p>Check off feeding and activities with a satisfying tap.</p>
+                            <h3>Pet Health & Wellness</h3>
+                            <p>Overview of pet health status, vaccines, and grooming schedules.</p>
                         </div>
                         <div class="screen-img-frame">
-                            <img src="images/screen_today_plan.png" alt="Today's Plan Interface" loading="lazy">
+                            <img src="images/screen_pets_list.png" alt="Pet Health and Profiles Overview">
                         </div>
                     </div>
 
-                    <!-- Screen Card 2 -->
-                    <div class="screen-card highlight">
-                        <div class="screen-header-info">
-                            <span class="step-num">02</span>
-                            <h3>Pet Health Dashboard</h3>
-                            <p>Real-time wellness scores, vaccines, and grooming status.</p>
-                        </div>
-                        <div class="screen-img-frame">
-                            <img src="images/screen_pets_list.png" alt="Pets Health Overview" loading="lazy">
-                        </div>
-                    </div>
-
-                    <!-- Screen Card 3 -->
+                    <!-- Step 02: screen_add_pet.png -->
                     <div class="screen-card">
                         <div class="screen-header-info">
-                            <span class="step-num">03</span>
-                            <h3>Profile & Avatars</h3>
+                            <span class="step-num">02</span>
+                            <h3>Custom Profiles & Avatars</h3>
                             <p>Customize species, breeds, weight, and theme color tags.</p>
                         </div>
                         <div class="screen-img-frame">
-                            <img src="images/screen_add_pet.png" alt="Add Pet Screen" loading="lazy">
+                            <img src="images/screen_add_pet.png" alt="Add New Pet Screen">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Social Proof & Creator Reviews -->
-        <section class="reviews-section" id="reviews">
+        <!-- 4. Honest Testimonials / "Why we built PetCare" Section -->
+        <section class="why-section" id="why-petcare">
             <div class="container">
                 <div class="section-title-wrap">
-                    <span class="sub-badge">Community Love</span>
-                    <h2 class="section-title">Loved by Pet Influencers & Parents</h2>
-                    <p class="section-desc">Here is what pet parents discovered when clicking over from TikTok and Instagram:</p>
+                    <span class="sub-badge">Our Mission</span>
+                    <h2 class="section-title">Why we built PetCare</h2>
+                    <p class="section-desc">Created to give pet owners peace of mind without complicated spreadsheets or clutter.</p>
                 </div>
 
-                <div class="reviews-grid">
+                <div class="why-cards-grid">
                     
-                    <div class="review-card">
-                        <div class="rev-header">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" alt="Sarah & Mochi" class="rev-avatar">
-                            <div>
-                                <h4>Sarah & Mochi 🐕</h4>
-                                <span class="rev-platform">TikTok Creator • @mochi_goldie</span>
-                            </div>
+                    <div class="why-card">
+                        <div class="why-icon-box orange">
+                            <span class="icon">💊</span>
                         </div>
-                        <div class="stars">★★★★★</div>
-                        <p>"I saw this on my FYP and downloaded immediately. With two golden retrievers on different medication schedules, PetCare literally saved my sanity!"</p>
+                        <h3>Never miss a dose</h3>
+                        <p>Routine reminders ensure every meal, walk, medication, and vet booster happens exactly on schedule.</p>
                     </div>
 
-                    <div class="review-card">
-                        <div class="rev-header">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="David K." class="rev-avatar">
-                            <div>
-                                <h4>David K. & Milo 🐈</h4>
-                                <span class="rev-platform">Instagram Pet Parent</span>
-                            </div>
+                    <div class="why-card">
+                        <div class="why-icon-box green">
+                            <span class="icon">🐾</span>
                         </div>
-                        <div class="stars">★★★★★</div>
-                        <p>"The UI is gorgeous! Smooth animations, easy reminder setup, and I never miss vet appointments now. Super recommended to any new pet owner."</p>
+                        <h3>One place for every pet</h3>
+                        <p>Whether you care for one dog or a full pet family, all health histories and profiles stay organized in one tap.</p>
                     </div>
 
-                    <div class="review-card">
-                        <div class="rev-header">
-                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face" alt="Elena V." class="rev-avatar">
-                            <div>
-                                <h4>Elena V. & 3 Pets 🐾</h4>
-                                <span class="rev-platform">TikTok Community Member</span>
-                            </div>
+                    <div class="why-card">
+                        <div class="why-icon-box blue">
+                            <span class="icon">⚡</span>
                         </div>
-                        <div class="stars">★★★★★</div>
-                        <p>"Managing 2 cats and a rescue puppy was chaos before PetCare. The multi-pet profiles and vaccine tracking are 10/10!"</p>
+                        <h3>Works offline</h3>
+                        <p>Smart notifications run directly on your device so your reminders arrive reliably even without an internet connection.</p>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- Desktop QR Code Modal / Card Section -->
-        <section class="qr-download-section">
-            <div class="container">
-                <div class="qr-box">
-                    <div class="qr-copy">
-                        <span class="qr-badge">📱 Scanning on Computer?</span>
-                        <h2>Scan with Your Phone Camera to Open Store</h2>
-                        <p>Open your mobile camera or barcode scanner to jump straight to Google Play or the App Store on your smartphone.</p>
-                        <div class="qr-badges">
-                            <span>🍏 iOS 14.0+</span>
-                            <span>🤖 Android 8.0+</span>
-                            <span>⚡ 100% Free to Try</span>
-                        </div>
-                    </div>
-                    <div class="qr-visual">
-                        <div class="qr-frame">
-                            <!-- High quality generated QR Code SVG leading to current URL or stores -->
-                            <svg class="qr-svg" viewBox="0 0 160 160" width="160" height="160" aria-label="QR Code to Download">
-                                <rect width="160" height="160" fill="white" rx="16"/>
-                                <!-- QR Pattern Simulation -->
-                                <path fill="#1A1A2E" d="M16 16h40v40H16zM24 24v24h24V24zm4 4h16v16H28zM104 16h40v40h-40zM112 24v24h24V24zm4 4h16v16h-16zM16 104h40v40H16zM24 112v24h24v-24zm4 4h16v16H28zM68 20h8v8h-8zm16 0h8v8h-8zm0 16h8v8h-8zm-16 16h8v8h-8zm24 0h8v8h-8zm-16 16h8v8h-8zm32 0h8v8h-8zm16-16h8v8h-8zm0 24h8v8h-8zm-8 8h8v8h-8zm-16 8h8v8h-8zm-16 0h8v8h-8zm-16 8h8v8h-8zm32 8h8v8h-8zm24-8h8v8h-8zm8 16h8v8h-8zm-16 8h8v8h-8zm-24 8h8v8h-8zm16 8h8v8h-8zm-32 8h8v8h-8zm24 8h8v8h-8zm-40-16h8v8h-8zm-8-8h8v8h-8zm-8 16h8v8h-8zm0-32h8v8h-8zm16-8h8v8h-8zm0 16h8v8h-8z"/>
-                                <!-- Small logo in center -->
-                                <circle cx="80" cy="80" r="14" fill="#FF6B35"/>
-                                <text x="80" y="85" font-size="12" fill="white" font-weight="bold" text-anchor="middle">🐾</text>
-                            </svg>
-                            <span class="qr-scan-label">Instant App Store Link</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Frequently Asked Questions -->
+        <!-- 5. Frequently Asked Questions -->
         <section class="faq-section" id="faq">
             <div class="container faq-container">
                 <div class="section-title-wrap">
@@ -475,21 +299,21 @@
                     
                     <details class="faq-item" open>
                         <summary class="faq-question">
-                            <span>Is PetCare free to download and use?</span>
+                            <span>Where can I download the app?</span>
                             <span class="faq-chevron">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Yes! You can download PetCare for free and start managing your pet's daily routines, tasks, and vaccination dates right away. Pro plans are available for unlimited pets and extended cloud storage.</p>
+                            <p>PetCare is available on Google Play for Android. The iOS version is coming soon. A direct APK is available for Android beta testers.</p>
                         </div>
                     </details>
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>Where can I download the app?</span>
+                            <span>Is PetCare free to download and use?</span>
                             <span class="faq-chevron">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>PetCare is available on the <strong>Apple App Store</strong> for iPhones/iPads and on <strong>Google Play</strong> for Android phones. Direct APK downloads are also supported for Android devices.</p>
+                            <p>Yes, PetCare is free to download and use. [Pro plan details coming soon.]</p>
                         </div>
                     </details>
 
@@ -517,15 +341,30 @@
             </div>
         </section>
 
-        <!-- Final Call to Action Section -->
-        <section class="final-cta-section">
+        <!-- 6. Final Call to Action Section (Touchpoint 2 of 3) -->
+        <section class="final-cta-section" id="final-cta">
             <div class="container">
                 <div class="cta-banner">
                     <span class="cta-emoji">🐶❤️🐱</span>
                     <h2>Start Giving Your Pets the Best Care Today</h2>
-                    <p>Join thousands of pet parents who made their daily pet routines stress-free.</p>
+                    <p>Keep your daily pet routines organized, simple, and stress-free.</p>
                     
-                    <div class="store-buttons-group center">
+                    <div class="store-buttons-group center" id="final-download">
+                        <!-- Google Play (Live) -->
+                        <a href="https://play.google.com/store/apps/details?id=com.hazem.petcare" target="_blank" rel="noopener noreferrer" class="store-btn android-btn" aria-label="Download PetCare on Google Play">
+                            <div class="store-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3.609 1.814L13.792 12 3.61 22.186a2.41 2.41 0 0 1-.22-.986V2.8c0-.36.08-.7.22-.986zm11.3 11.3l2.45 2.45-12.08 6.97 9.63-9.42zm2.45-2.45l-2.45 2.45-9.63-9.42 12.08 6.97zm1.18 1.18l3.32 1.92c.93.54.93 1.42 0 1.96l-3.32 1.92-2.13-2.13 2.13-2.13z"/>
+                                </svg>
+                            </div>
+                            <div class="store-text">
+                                <span class="store-sub">Get it on</span>
+                                <span class="store-name">Google Play</span>
+                            </div>
+                            <span class="store-highlight">Android</span>
+                        </a>
+
+                        <!-- App Store (Coming Soon) -->
                         <a href="#appstore" class="store-btn ios-btn coming-soon-btn" aria-label="PetCare on App Store (Coming Soon)">
                             <div class="store-icon">
                                 <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
@@ -538,26 +377,39 @@
                             </div>
                             <span class="store-highlight coming-soon-badge">Coming Soon</span>
                         </a>
+                    </div>
 
-                        <a href="https://play.google.com/store/apps/details?id=com.hazem.petcare&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="store-btn android-btn" aria-label="Download PetCare on Google Play">
-                            <div class="store-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M3.609 1.814L13.792 12 3.61 22.186a2.41 2.41 0 0 1-.22-.986V2.8c0-.36.08-.7.22-.986zm11.3 11.3l2.45 2.45-12.08 6.97 9.63-9.42zm2.45-2.45l-2.45 2.45-9.63-9.42 12.08 6.97zm1.18 1.18l3.32 1.92c.93.54.93 1.42 0 1.96l-3.32 1.92-2.13-2.13 2.13-2.13z"/>
-                                </svg>
-                            </div>
-                            <div class="store-text">
-                                <span class="store-sub">Get it on</span>
-                                <span class="store-name">Google Play</span>
-                            </div>
-                            <span class="store-highlight">Android</span>
+                    <!-- Single Direct APK Download link (Requirement 3) -->
+                    <div class="apk-download-box center">
+                        <a href="petcare-app.apk" class="apk-link" download="PetCare-app.apk">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993 0 .5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.996-3.4572c.1051-.1822.0427-.4151-.1395-.5202-.1821-.1051-.415-.0427-.5201.1395l-2.0251 3.5076c-1.5791-.7208-3.3643-1.1217-5.2428-1.1217-1.8785 0-3.6637.4009-5.2428 1.1217L4.678 4.9835c-.1051-.1822-.338-.2446-.5201-.1395-.1822.1051-.2446.338-.1395.5202l1.996 3.4572C2.6841 10.6698.4285 14.2882.4285 18.5h23.143c0-4.2118-2.2556-7.8302-5.6885-9.1786"/></svg>
+                            Android beta APK (v1.0)
                         </a>
                     </div>
+
+                    <!-- Desktop Only QR Block (Requirement 1 & 8) -->
+                    <div class="cta-qr-card desktop-only">
+                        <div class="cta-qr-content">
+                            <span class="qr-subtag">📱 Scan with your phone</span>
+                            <h3>Instant Google Play Download</h3>
+                            <p>Scan with your phone camera to open the Google Play store page directly.</p>
+                            <div class="qr-badges-clean">
+                                <span>🤖 Android 8.0+</span>
+                                <span>⚡ Free</span>
+                            </div>
+                        </div>
+                        <div class="cta-qr-image-wrapper">
+                            <img src="images/qr_google_play.png" alt="Scan to open PetCare on Google Play" width="120" height="120" class="real-qr-code">
+                            <span class="qr-micro-caption">Google Play Direct Link</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- 7. Footer -->
     <footer class="site-footer">
         <div class="container footer-layout">
             <div class="footer-brand-side">
@@ -566,28 +418,21 @@
                     <span class="brand-name">PetCare</span>
                 </div>
                 <p class="footer-tagline">Your beloved pets deserve loving, organized care every single day.</p>
-                <div class="social-links-row">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow PetCare on Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
-                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow PetCare on TikTok">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                    </a>
-                </div>
             </div>
 
             <div class="footer-links-side">
                 <div class="footer-col">
-                    <h4>Product</h4>
+                    <h4>Navigation</h4>
                     <a href="#features">Features</a>
-                    <a href="#preview">App Screens</a>
-                    <a href="#download">Download</a>
+                    <a href="#preview">See It In Action</a>
+                    <a href="#why-petcare">Why PetCare</a>
+                    <a href="#faq">FAQ</a>
                 </div>
                 <div class="footer-col">
                     <h4>Legal & Trust</h4>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
-                    <a href="mailto:support@petcare-app.com">Support Contact</a>
+                    <a href="mailto:SUPPORT_EMAIL">Support Contact</a>
                 </div>
             </div>
         </div>
@@ -597,15 +442,15 @@
         </div>
     </footer>
 
-    <!-- Mobile Sticky Download Dock (Essential for Instagram & TikTok Visitors) -->
+    <!-- 8. Mobile Sticky Download Dock (Touchpoint 3 of 3 - Mobile Only) -->
     <div class="mobile-sticky-dock" id="mobile-dock" aria-label="Sticky Download Bar">
         <div class="dock-inner">
             <img src="logo.png" alt="PetCare" class="dock-icon" width="40" height="40">
             <div class="dock-info">
-                <span class="dock-title">PetCare App</span>
-                <span class="dock-rating">⭐⭐⭐⭐⭐ (4.9) • Free</span>
+                <span class="dock-title">PetCare</span>
+                <span class="dock-status">Free</span>
             </div>
-            <a href="#download" class="dock-btn" id="dock-action-btn">
+            <a href="https://play.google.com/store/apps/details?id=com.hazem.petcare" target="_blank" rel="noopener noreferrer" class="dock-btn" id="dock-action-btn">
                 <span>Install</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 13l5 5 5-5M12 4v14"/></svg>
             </a>
