@@ -22,6 +22,7 @@ const APP_CONFIG = {
 const TRANSLATIONS = {
     en: {
         flag: "🇬🇧",
+        flagImg: "https://flagcdn.com/w20/gb.png",
         name: "English",
         nav_features: "Features",
         nav_preview: "See It In Action",
@@ -106,6 +107,7 @@ const TRANSLATIONS = {
     },
     fr: {
         flag: "🇫🇷",
+        flagImg: "https://flagcdn.com/w20/fr.png",
         name: "Français",
         nav_features: "Fonctionnalités",
         nav_preview: "En Action",
@@ -190,6 +192,7 @@ const TRANSLATIONS = {
     },
     es: {
         flag: "🇪🇸",
+        flagImg: "https://flagcdn.com/w20/es.png",
         name: "Español",
         nav_features: "Funciones",
         nav_preview: "Ver en Acción",
@@ -274,6 +277,7 @@ const TRANSLATIONS = {
     },
     de: {
         flag: "🇩🇪",
+        flagImg: "https://flagcdn.com/w20/de.png",
         name: "Deutsch",
         nav_features: "Funktionen",
         nav_preview: "In Aktion",
@@ -436,11 +440,14 @@ function setLanguage(lang) {
     // Update document language attribute
     document.documentElement.lang = lang;
 
-    // Update toggle button flag & label
+    // Update toggle button flag image & label
     const flagEl = document.getElementById("current-lang-flag");
     const textEl = document.getElementById("current-lang-text");
 
-    if (flagEl) flagEl.textContent = t.flag;
+    if (flagEl) {
+        flagEl.src = t.flagImg;
+        flagEl.alt = t.name + ' flag';
+    }
     if (textEl) textEl.textContent = t.name;
 
     // Update active state on options

@@ -195,8 +195,12 @@ a {
 }
 
 .lang-current-flag {
-    font-size: 20px;
-    line-height: 1;
+    display: block;
+    width: 22px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+    flex-shrink: 0;
 }
 
 .lang-current-label {
@@ -265,8 +269,11 @@ a {
 }
 
 .lang-opt-flag {
-    font-size: 22px;
-    line-height: 1;
+    display: block;
+    width: 24px;
+    height: 17px;
+    object-fit: cover;
+    border-radius: 2px;
     flex-shrink: 0;
 }
 
