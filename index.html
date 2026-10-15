@@ -39,22 +39,34 @@
                 <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
             </ul>
 
-            <!-- Language Selector (Replaces Get App Free button) -->
+            <!-- Language Selector - Custom Dropdown with Flags -->
             <div class="nav-actions">
                 <div class="lang-selector-wrap" id="lang-selector">
-                    <div class="lang-selector-btn" id="lang-btn-display">
+                    <button class="lang-selector-btn" id="lang-btn-display" aria-haspopup="listbox" aria-expanded="false" aria-label="Select Language">
                         <span class="lang-current-flag" id="current-lang-flag">🇬🇧</span>
                         <span class="lang-current-label" id="current-lang-text">English</span>
                         <svg class="lang-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M6 9l6 6 6-6"/>
                         </svg>
-                        <select id="lang-select" class="lang-native-select" aria-label="Select Language">
-                            <option value="en" selected>🇬🇧 English</option>
-                            <option value="fr">🇫🇷 Français</option>
-                            <option value="es">🇪🇸 Español</option>
-                            <option value="de">🇩🇪 Deutsch</option>
-                        </select>
-                    </div>
+                    </button>
+                    <ul class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Language options">
+                        <li class="lang-option active" data-value="en" role="option" aria-selected="true">
+                            <span class="lang-opt-flag">🇬🇧</span>
+                            <span class="lang-opt-label">English</span>
+                        </li>
+                        <li class="lang-option" data-value="fr" role="option" aria-selected="false">
+                            <span class="lang-opt-flag">🇫🇷</span>
+                            <span class="lang-opt-label">Français</span>
+                        </li>
+                        <li class="lang-option" data-value="es" role="option" aria-selected="false">
+                            <span class="lang-opt-flag">🇪🇸</span>
+                            <span class="lang-opt-label">Español</span>
+                        </li>
+                        <li class="lang-option" data-value="de" role="option" aria-selected="false">
+                            <span class="lang-opt-flag">🇩🇪</span>
+                            <span class="lang-opt-label">Deutsch</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

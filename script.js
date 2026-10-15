@@ -367,19 +367,59 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /**
- * 1. Language Selector Controller
+ * 1. Language Selector Controller (Custom Dropdown)
  */
 function initLanguageSelector() {
-    const langSelect = document.getElementById("lang-select");
-    if (!langSelect) return;
+    const btn = document.getElementById("lang-btn-display");
+    const dropdown = document.getElementById("lang-dropdown");
+    const options = document.querySelectorAll(".lang-option");
 
-    langSelect.addEventListener("change", (e) => {
-        setLanguage(e.target.value);
+    if (!btn || !dropdown) return;
+
+    // Toggle dropdown open/close on button click
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = dropdown.classList.contains("open");
+        closeDropdown(btn, dropdown);
+        if (!isOpen) openDropdown(btn, dropdown);
     });
 
-    // Load saved language preference or default to English
+    // Handle option selection
+    options.forEach(opt => {
+        opt.addEventListener("click", () => {
+            const lang = opt.getAttribute("data-value");
+            setLanguage(lang);
+            closeDropdown(btn, dropdown);
+        });
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+            closeDropdown(btn, dropdown);
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeDropdown(btn, dropdown);
+    });
+
+    // Load saved language or default
     const savedLang = localStorage.getItem("petcare_lang") || APP_CONFIG.defaultLang;
     setLanguage(savedLang);
+}
+
+function openDropdown(btn, dropdown) {
+    dropdown.classList.add("open");
+    btn.classList.add("open");
+    btn.setAttribute("aria-expanded", "true");
+}
+
+function closeDropdown(btn, dropdown) {
+    dropdown.classList.remove("open");
+    btn.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
 }
 
 /**
@@ -396,16 +436,19 @@ function setLanguage(lang) {
     // Update document language attribute
     document.documentElement.lang = lang;
 
-    // Update toggle button flag, label, and select value
+    // Update toggle button flag & label
     const flagEl = document.getElementById("current-lang-flag");
     const textEl = document.getElementById("current-lang-text");
-    const langSelect = document.getElementById("lang-select");
 
     if (flagEl) flagEl.textContent = t.flag;
     if (textEl) textEl.textContent = t.name;
-    if (langSelect && langSelect.value !== lang) {
-        langSelect.value = lang;
-    }
+
+    // Update active state on options
+    document.querySelectorAll(".lang-option").forEach(opt => {
+        const isActive = opt.getAttribute("data-value") === lang;
+        opt.classList.toggle("active", isActive);
+        opt.setAttribute("aria-selected", isActive ? "true" : "false");
+    });
 
     // Update all elements with data-i18n attribute
     document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -419,7 +462,7 @@ function setLanguage(lang) {
     try {
         localStorage.setItem("petcare_lang", lang);
     } catch (e) {
-        // localStorage not available or storage disabled
+        // localStorage not available
     }
 }
 
